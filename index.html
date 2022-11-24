@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <title>ScoreKeeper</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1><span id="one">0</span> to <span id="two">0</span></h1>
+        <button id="playerOneBtn">Player one WON</button>
+        <button id="playerTwoBtn">Player two WON</button><br>
+        <button id="resetBtn">RESET</button>
+        <label for="select">Playing TO:</label>
+        <select id="select">
+            <option value="5">5</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="15">15</option>
+        </select>
+        <section id="instructions">
+            <h2>Keyboard instructions:</h2>
+            <p>
+                Press Q to ADD point to player ONE<br>
+                Press E to ADD point to player TWO<br>
+                Press S to RESET
+            </p>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
