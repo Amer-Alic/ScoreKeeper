@@ -60,11 +60,9 @@ const turn = function (player, opponent) {
             opponent.text.innerText = `0`;
         }
         else if (playerOne.score === 2 && playerOne.score - 2 === playerTwo.score) {
-            reset(playerOne, playerTwo)
             differenceOfTwo = false;
         }
         else if (playerTwo.score === 2 && playerTwo.score - 2 === playerOne.score) {
-            reset(playerOne, playerTwo)
             differenceOfTwo = false;
         }
     }
@@ -96,7 +94,9 @@ const keyActivation = function (e) {
 
     }
 }
-
+const resetKey = function (e) {
+    e.code === `KeyS` && reset(playerOne, playerTwo)
+}
 // eventListeners
 playerOne.btn.addEventListener(`click`, function () {
     turn(playerOne, playerTwo)
@@ -115,3 +115,4 @@ select.addEventListener(`change`, function () {
 })
 // keyfunctions
 body.addEventListener(`keydown`, keyActivation)
+body.addEventListener(`keydown`, resetKey)
